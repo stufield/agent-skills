@@ -40,6 +40,17 @@ coalesce(col, replacement)         # inline
 
 ---
 
+## Always use 1L for integers when appropriate
+
+- always use the integer notation when appropriate, especially when
+  indexing
+
+```
+x[1L]
+x[1:8L]
+if (length(x) == 2L) ...
+```
+
 ## ggplot2 conventions
 
 - **Axis limits**: always `coord_cartesian(xlim = ..., ylim = ...)` — never `xlim()`/`ylim()`
