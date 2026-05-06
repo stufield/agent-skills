@@ -1,3 +1,8 @@
+---
+name: r-pkg-dev
+description: R package development guidelines — project structure, GitHub Actions CI/CD, DESCRIPTION files, test infrastructure, and non-CRAN dependency management.
+---
+
 # R Package Development Skill
 
 ## When to use

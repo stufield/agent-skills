@@ -1,3 +1,8 @@
+---
+name: quarto
+description: Conventions for creating, editing, and debugging Quarto documents (.qmd) — HTML reports, parameterized content, code chunks, TOC formatting, and client branding.
+---
+
 # Quarto Reports Skill
 
 ## When to use

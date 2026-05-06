@@ -1,3 +1,8 @@
+---
+name: cercle
+description: Behavioral guidelines for coding at Cercle — think before coding, simplicity first, surgical changes, goal-driven execution. Apply when writing, reviewing, or refactoring any code.
+---
+
 # CLAUDE.md
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with

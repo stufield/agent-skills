@@ -1,3 +1,8 @@
+---
+name: r-analysis
+description: Idiomatic R code guidelines for data analysis, wrangling, visualization, modeling, and utility functions — tidyverse patterns, native pipe, ggplot2 conventions, preferred packages.
+---
+
 # R Analysis Skill
 
 ## When to use
