@@ -1,9 +1,19 @@
 ---
-name: tidyverse-style
-description: Tidyverse R style guide — naming conventions, spacing, pipes, ggplot2 formatting, roxygen2 docs, error messages, NEWS.md, and Git workflow. Apply when writing or reviewing any R code, package files, or documentation.
+name: style-guide
+description: R style guide for all text files — naming conventions,
+spacing, pipes, ggplot2 formatting, roxygen2 docs, error messages,
+NEWS.md, and Git workflow. Apply when writing or reviewing any text
+file, markdown, quarto document, or R script code, package files,
+or documentation.
 ---
 
-# Tidyverse R Style Guide
+# General Text Style
+
+IMPORTANT! when writing text to file, keep all lines <= 70 chars
+
+
+
+# R Style Guide
 
 > Compiled from https://style.tidyverse.org/ — all 11 sections.
 > Use `styler` to auto-restyle code; use `lintr` to check conformance.
@@ -27,7 +37,8 @@ Apply when:
 
 ### 1. File Naming (Analysis Scripts)
 
-**Machine-readable:** lowercase only, no spaces/symbols, words delimited by `-` or `_`, extension `.R`.
+**Machine-readable:** lowercase only, no spaces/symbols, words
+delimited by `-` or `_`, extension `.R`.
 
 ```r
 # Good
@@ -50,7 +61,9 @@ report-draft-notes.txt
 temp.r
 ```
 
-**Sort-friendly:** dates in `yyyy-mm-dd` (ISO 8601); padded numbers (`01-`, `02-`, not `1-`, `2-`); sequence numbers at the *start* of the name.
+**Sort-friendly:** dates in `yyyy-mm-dd` (ISO 8601); padded numbers
+(`01-`, `02-`, not `1-`, `2-`); sequence numbers at the *start* of the
+name.
 
 ```r
 # Good
@@ -76,12 +89,13 @@ IMPORTANT! when writing text to file, keep all lines <= 70 chars
 
 
 ```r
-# Load data ---------------------------
+# Load data ------
 
-# Plot data ---------------------------
+# Plot data ------
 ```
 
-Load all packages with `library()` at the **very top** of the file — never sprinkle them throughout.
+Load all packages with `library()` at the **very top** of the file —
+never sprinkle them throughout.
 
 ---
 
@@ -108,7 +122,8 @@ T <- FALSE
 c <- 10
 ```
 
-If cramming data into names (e.g. `model_2018`, `model_2019`), use a list or data frame instead.
+If cramming data into names (e.g. `model_2018`, `model_2019`), use a
+list or data frame instead.
 
 ---
 
@@ -157,7 +172,8 @@ height <- (feet * 12) + inches    # Good
 height<-feet*12+inches            # Bad
 ```
 
-**No spaces around high-precedence operators:** `::`, `:::`, `$`, `@`, `[`, `[[`, `^`, unary `-`/`+`, `:`.
+**No spaces around high-precedence operators:** `::`, `:::`, `$`, `@`,
+`[`, `[[`, `^`, unary `-`/`+`, `:`.
 
 ```r
 sqrt(x^2 + y^2)   # Good
@@ -184,10 +200,13 @@ call(!! xyz)    # Bad
 ~ .x + .y      # Bad (complex RHS needs space: `~ .x + .y` is Bad; write `~ .x + .y`)
 ```
 
-Wait — correction per the guide: single-sided formulas with a *single* identifier get no space (`~foo`); complex RHS *does* get a space (`~ .x + .y`).
+Wait — correction per the guide: single-sided formulas with a *single*
+identifier get no space (`~foo`); complex RHS *does* get a space (`~
+.x + .y`).
 
 
-**Extra spaces for alignment** are preferred when they improve readability:
+**Extra spaces for alignment** are preferred when they improve
+readability:
 
 ```r
 list(
@@ -202,13 +221,15 @@ list(
 
 - No empty lines at the start or end of functions.
 - At most one empty line to separate "thoughts" or functions.
-- Empty line before a comment block is helpful to visually connect it to the code below.
+- Empty line before a comment block is helpful to visually connect it
+  to the code below.
 
 ---
 
 ### 6. Function Calls
 
-**Named arguments:** omit names for data args; use full names when overriding defaults.
+**Named arguments:** omit names for data args; use full names when
+overriding defaults.
 
 ```r
 mean(1:10, na.rm = TRUE)         # Good
@@ -231,7 +252,8 @@ if (nzchar(x) < 1) { ... }    # Good
 if (nzchar(x <- complicated_function()) < 1) { ... }    # Bad
 ```
 
-**Long calls:** 80-char line limit. If too long, one argument per line, closing `)` on its own line.
+**Long calls:** 70-char line limit. If too long, one argument per
+line, closing `)` on its own line.
 
 ```r
 # Good
@@ -247,7 +269,8 @@ do_something_very_complicated("that", requires, many, arguments,
                               )
 ```
 
-Multiple unnamed closely-related args can share a line (common in `paste0`):
+Multiple unnamed closely-related args can share a line (common in
+`paste0`):
 
 ```r
 paste0(
@@ -294,11 +317,14 @@ for (i in seq) {
 ```
 
 **If statements:**
-- Single-line `if` (no braces) only for simple, side-effect-free assignments.
+- Single-line `if` (no braces) only for simple, side-effect-free
+  assignments.
 - Multi-line `if` must use braced expressions.
 - `else` on the same line as `}`.
-- Use `&&` / `||` in conditions, never `&` / `|` (which are vectorised).
-- Avoid implicit type coercion in conditions: `if (length(x) > 0)` not `if (length(x))`.
+- Use `&&` / `||` in conditions, never `&` / `|` (which are
+  vectorised).
+- Avoid implicit type coercion in conditions: `if (length(x) > 0)` not
+  `if (length(x))`.
 
 ```r
 # Good — single line
@@ -317,7 +343,8 @@ if (x > 10)
   x * 2
 ```
 
-**Control flow modifiers** (`return()`, `stop()`, `break`, `next`) always go in their own `{}` block.
+**Control flow modifiers** (`return()`, `stop()`, `break`, `next`)
+always go in their own `{}` block.
 
 ```r
 # Good
@@ -329,7 +356,8 @@ if (y < 0) {
 if (y < 0) stop("Y is negative")
 ```
 
-**Switch statements:** use named (not positional) args; each element on its own line; include a fall-through error.
+**Switch statements:** use named (not positional) args; each element
+on its own line; include a fall-through error.
 
 ```r
 switch(x,
@@ -357,7 +385,10 @@ x = 5     # Bad
 
 **Logicals:** always `TRUE` / `FALSE`, never `T` / `F`.
 
-**Comments:** `# ` (hash + single space). In analysis code, use comments to record *findings and decisions*, not to explain what the code does. If you need to explain what it does, rewrite it to be clearer.
+**Comments:** `# ` (hash + single space). In analysis code, use
+comments to record *findings and decisions*, not to explain what the
+code does. If you need to explain what it does, rewrite it to be
+clearer.
 
 ---
 
@@ -365,27 +396,31 @@ x = 5     # Bad
 
 **Naming:** verbs for functions, nouns for variables.
 
-**Anonymous functions:** use `\(x) x + 1` for short inline lambdas in arguments. Do **not** use `\()` for multi-line bodies, named functions, or inside pipes.
+**Anonymous functions:** use `\(.x) .x + 1` for short inline lambdas in
+arguments. Do **not** use `\()` for multi-line bodies, named
+functions, or inside pipes.
 
 ```r
 # Good
-map(xs, \(x) mean((x + 5)^2))
+map(xs, \(.x) mean((.x + 5)^2))
 
-map(xs, function(x) {
-  mean((x + 5)^2)
+map(xs, function(.x) {
+  mean((.x + 5)^2)
 })
 
-cv <- function(x) {
-  sd(x) / mean(x)
+cv <- function(.x) {
+  sd(.x) / mean(.x)
 }
 
 # Bad
 map(xs, ~ mean((.x + 5)^2))          # formula lambda — avoid
-map(xs, \(x) { mean((x + 5)^2) })    # \() with multi-line body
-cv <- \(x) sd(x) / mean(x)           # \() for named function
+map(xs, \(.x) { mean((.x + 5)^2) })  # \() with multi-line body
+cv <- \(.x) sd(.x) / mean(.x)        # \() for named function
 ```
 
-**Multi-line function definitions:** two acceptable styles — *single-indent* (args indented 2 spaces, `) {` on its own line) or *hanging-indent* (args aligned with opening `(`).
+**Multi-line function definitions:** two acceptable styles —
+*single-indent* (args indented 2 spaces, `) {` on its own line) or
+*hanging-indent* (args aligned with opening `(`).
 
 ```r
 # Single-indent (preferred for long names / S7 methods)
@@ -403,7 +438,8 @@ long_function_name <- function(a = "a long argument",
 }
 ```
 
-**`return()`:** use only for *early returns*. Let R implicitly return the last expression otherwise.
+**`return()`:** use only for *early returns*. Let R implicitly return
+the last expression otherwise.
 
 ```r
 # Good
@@ -433,7 +469,8 @@ print.url <- function(x, ...) {
 }
 ```
 
-**Function comments:** explain the *why*, not the what/how. Sentence case; end with `.` only if two or more sentences.
+**Function comments:** explain the *why*, not the what/how. Sentence
+case; end with `.` only if two or more sentences.
 
 ---
 
@@ -463,7 +500,8 @@ arrange(Sepal.Length)
 - Manipulating more than one primary object at a time.
 - There are meaningful intermediate objects worth naming.
 
-**Long steps:** if a step's args don't fit on one line, each arg on its own line:
+**Long steps:** if a step's args don't fit on one line, each arg on
+its own line:
 
 ```r
 iris |>
@@ -476,7 +514,8 @@ iris |>
 
 **Short pipes on one line** are OK, but one-function-per-line is generally better.
 
-**Assignment with pipes:** variable name first (acts as a heading) or at end with `->`. Both are acceptable; name-first is most readable.
+**Assignment with pipes:** variable name first (acts as a heading) or
+at end with `->`. Both are acceptable; name-first is most readable.
 
 ```r
 iris_long <- iris |>
@@ -484,7 +523,8 @@ iris_long <- iris |>
   arrange(-value)
 ```
 
-**Inline pipes as arguments:** OK for short, obvious sub-pipes; extract to named variables for complex ones.
+**Inline pipes as arguments:** OK for short, obvious sub-pipes;
+extract to named variables for complex ones.
 
 ```r
 # Good
@@ -528,7 +568,8 @@ iris |>
 ggplot(aes(...)) + geom_point()
 ```
 
-Do **all** data manipulation in a pipeline *before* `ggplot()`. Never filter/mutate inside the `data` argument.
+Do **all** data manipulation in a pipeline *before* `ggplot()`. Never
+filter/mutate inside the `data` argument.
 
 ---
 
@@ -546,7 +587,8 @@ Do **all** data manipulation in a pipeline *before* `ggplot()`. Never filter/mut
 
 ### 14. Package File Organisation
 
-Public functions + their roxygen docs come first. Private (unexported) helper functions go after all documented public functions.
+Public functions + their roxygen docs come first. Private (unexported)
+helper functions go after all documented public functions.
 
 ```r
 # Good
@@ -586,9 +628,11 @@ Use roxygen2 with markdown support.
 #' This is a generic function which combines its arguments.
 ```
 
-**`@description`:** explicit tag only when multi-paragraph or contains a bulleted list.
+**`@description`:** explicit tag only when multi-paragraph or contains
+a bulleted list.
 
-**Indentation:** one space after `#'`; continuation lines for a tag add 2 more spaces.
+**Indentation:** one space after `#'`; continuation lines for a tag
+add 2 more spaces.
 
 ```r
 #' @param key The bare (unquoted) name of the column whose values will be used
@@ -599,7 +643,8 @@ Use roxygen2 with markdown support.
 
 **`@inheritParams`:** use to avoid duplicating parameter docs.
 
-**Capitalization:** sentence case throughout; no code font for package names (use `{glue}` or "the glue package").
+**Capitalization:** sentence case throughout; no code font for package
+names (use `{glue}` or "the glue package").
 
 ```r
 # Good
@@ -611,11 +656,17 @@ Use `glue` to ...
 Use the {glue} package to ...   # redundant — not both
 ```
 
-**Cross-linking:** `[function()]` for same-package; `[pkg::function()]` for other packages. Use `@seealso` for related functions; `@family` for groups of related functions (plural family names).
+**Cross-linking:** `[function()]` for same-package;
+`[pkg::function()]` for other packages. Use `@seealso` for related
+functions; `@family` for groups of related functions (plural family
+names).
 
-**R code in docs:** backtick all function args, values (`TRUE`, `NA`), literals, and class names. Consider `[function()]` over `` `function()` `` for cross-link benefit.
+**R code in docs:** backtick all function args, values (`TRUE`, `NA`),
+literals, and class names. Consider `[function()]` over ``
+`function()` `` for cross-link benefit.
 
-**Internal functions:** document with `#'` but add `@noRd` to suppress `.Rd` generation.
+**Internal functions:** document with `#'` but add `@noRd` to suppress
+`.Rd` generation.
 
 ```r
 #' Drop last
@@ -642,9 +693,11 @@ Test file organisation mirrors `R/` organisation:
 Use `cli::cli_abort()` (preferred over `stop()` in packages).
 
 **Structure:**
-1. **Problem statement** — general, sentence case, ends with period. Use "must" when expected type/size is clear; "can't" when it isn't.
+1. **Problem statement** — general, sentence case, ends with period.
+   Use "must" when expected type/size is clear; "can't" when it isn't.
 2. **Bulleted detail** — `x` bullets for what's wrong; `i` bullets for context.
-3. **Hint** (optional) — `i` bullet, ends with `?`, only for clear/common mistakes.
+3. **Hint** (optional) — `i` bullet, ends with `?`, only for
+   clear/common mistakes.
 
 ```r
 # Good problem statements
@@ -669,7 +722,8 @@ cli_abort(c(
 - Sentence case; end in period.
 - Prefer singular in problem statements.
 - Show up to 5 problems, then `... and N more problems`.
-- Surround argument names in backticks; use "column" (not "variable") to distinguish from args.
+- Surround argument names in backticks; use "column" (not "variable")
+  to distinguish from args.
 - No manual line breaks — let cli wrap automatically.
 - Keep each component under 70 chars where possible.
 
@@ -679,7 +733,8 @@ cli_abort(c(
 
 ### 18. NEWS.md
 
-**During development:** add bullets at the top of the file immediately under the version heading; one line per bullet.
+**During development:** add bullets at the top of the file immediately
+under the version heading; one line per bullet.
 
 ```md
 # pkg (development version)
@@ -695,12 +750,15 @@ cli_abort(c(
 - Wrap lines at 80 chars; end each bullet with a period.
 - Frame positively ("now does X"), present tense.
 - Version heading: level 1 `#`; sub-sections: level 2 `##`.
-- Common section headings: `## Breaking changes`, `## New features`, `## Minor improvements and fixes`.
+- Common section headings: `## Breaking changes`, `## New features`,
+  `## Minor improvements and fixes`.
 - Within a section, sort bullets alphabetically by first function mentioned.
-- Breaking changes section at the top; each bullet includes symptoms and fix instructions.
+- Breaking changes section at the top; each bullet includes symptoms
+  and fix instructions.
 - Functions/args/filenames in backticks; function names include `()`.
 
-**Blog post:** for major/minor releases, write a post highlighting new features with examples.
+**Blog post:** for major/minor releases, write a post highlighting new
+features with examples.
 
 ---
 
@@ -717,7 +775,8 @@ cli_abort(c(
 
 **Pull requests:**
 - Title: brief description of changes, standalone (no issue number in title).
-- Description: blank for obvious diffs; overview for complex changes; include `Fixes #<issue-number>` in description if applicable.
+- Description: blank for obvious diffs; overview for complex changes;
+  include `Fixes #<issue-number>` in description if applicable.
 
 ---
 
@@ -735,7 +794,7 @@ cli_abort(c(
 | Pipe | `\|>` (base), not `%>%` |
 | `{` placement | Last char on line; `}` first char on line |
 | `return()` | Early returns only |
-| Anonymous fns | `\(x) x + 1` for short; `function(x) { }` for multi-line |
+| Anonymous fns | `\(.x) .x + 1` for short; `function(x) { }` for multi-line |
 | ggplot `+` | Same rules as `\|>` |
 | `if` condition | `&&` / `\|\|` not `&` / `\|` |
 | Comments | `# ` prefix; explain *why* not *what* |

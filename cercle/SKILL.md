@@ -1,6 +1,8 @@
 ---
 name: cercle
-description: Behavioral guidelines for coding at Cercle — think before coding, simplicity first, surgical changes, goal-driven execution. Apply when writing, reviewing, or refactoring any code.
+description: Behavioral guidelines for coding at Cercle — think before
+coding, simplicity first, surgical changes, goal-driven execution.
+Apply when writing, reviewing, or refactoring any code.
 ---
 
 # CLAUDE.md
@@ -10,6 +12,10 @@ project-specific instructions as needed.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For
 trivial tasks, use judgment.
+
+**KISS:** Keep it simple stupid. When possible use bullet points.
+Do not provide long answers that take a human many minutes to read.
+
 
 ---
 
@@ -35,7 +41,8 @@ Before implementing:
 - No error handling for impossible scenarios.
 - If you write 200 lines and it could be 50, rewrite it.
 
-Ask yourself: *"Would a senior engineer say this is overcomplicated?"* If yes, simplify.
+Ask yourself: *"Would a senior engineer say this is overcomplicated?"*
+If yes, simplify.
 
 ---
 

@@ -1,11 +1,14 @@
 ---
 name: r-analysis
-description: Idiomatic R code guidelines for data analysis, wrangling, visualization, modeling, and utility functions — tidyverse patterns, native pipe, ggplot2 conventions, preferred packages.
+description: Idiomatic R code guidelines for data analysis, wrangling,
+visualization, modeling, and utility functions — tidyverse patterns,
+native pipe, ggplot2 conventions, preferred packages.
 ---
 
 # R Analysis Skill
 
 ## When to use
+
 When writing, reviewing, debugging, or extending R code for data
 analysis, wrangling, visualization, modeling, or utility functions.
 Also applies when designing function APIs or reviewing tidyverse
@@ -15,8 +18,8 @@ pipelines.
 
 ## Core philosophy
 - **Idiomatic over clever**: prefer simple, readable tidyverse patterns
-- **Concise**: 2–3 line solutions are almost always better than elaborate ones; push back
-  if a solution is over-engineered
+- **Concise**: 2–3 line solutions are almost always better than
+  elaborate ones; push back if a solution is over-engineered
 - **Native pipe**: prefer `|>` over `%>%`
 - **No unnecessary dependencies**: don't reach for a package if base R
   or a tidyverse function already does it cleanly
@@ -58,15 +61,17 @@ if (length(x) == 2L) ...
 
 ## ggplot2 conventions
 
-- **Axis limits**: always `coord_cartesian(xlim = ..., ylim = ...)` — never `xlim()`/`ylim()`
-  which drops data silently
+- **Axis limits**: always `coord_cartesian(xlim = ..., ylim = ...)` —
+  never `xlim()`/`ylim()` which drops data silently
 - **Dodge histograms**: `geom_histogram(position = "dodge")`
 - **Jitter + dodge**: `position_jitterdodge()` when combining both
-- **Vertical reference lines**: `geom_vline()` with explicit `xintercept`; use small offsets
-  or jitter when multiple lines cluster
-- **Large datasets in geom layers**: subsample within the geom call rather than pre-filtering
-  the whole dataset
-- **Smooth over categorical axes**: add `group = 1` or use numeric coding explicitly
+- **Vertical reference lines**: `geom_vline()` with explicit
+  `xintercept`; use small offsets or jitter when multiple lines
+  cluster
+- **Large datasets in geom layers**: subsample within the geom call
+  rather than pre-filtering the whole dataset
+- **Smooth over categorical axes**: add `group = 1` or use numeric
+  coding explicitly
 
 ---
 
@@ -79,11 +84,13 @@ if (length(x) == 2L) ...
 | Plotting  | ggplot2 |
 | Package Dev | devtools, roxygen2, testthat |
 
----
 
-## Things to avoid
-- `attach()` — ever
-- `setwd()` — ever
-- `T` / `F` shorthand — always write `TRUE` / `FALSE`
-- `subset()` — use `dplyr::filter()` instead
-- Reassigning built-in names (`c`, `df`, `t`, etc.)
+## Avoid these packages 
+
+- purrr
+- packrat
+- stringr
+- magrittr
+- feather
+
+---
