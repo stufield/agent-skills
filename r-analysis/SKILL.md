@@ -1,20 +1,17 @@
 ---
-name: r-analysis
-description: Idiomatic R code guidelines for data analysis, wrangling,
-visualization, modeling, and utility functions — tidyverse patterns,
-native pipe, ggplot2 conventions, preferred packages.
+name: R-analysis
+description: >
+  Idiomatic R code guidelines for data analysis, wrangling,
+  visualization, modeling, and utility functions — tidyverse patterns,
+  native pipe, ggplot2 conventions, preferred packages.
+when_to_load:
+  - when writing, reviewing, debugging, or extending R code
+  - when analysis, wrangling, visualization, modeling, or utility functions in R
+author: Stu Field
+version: 1.0
 ---
 
-# R Analysis Skill
-
-## When to use
-
-When writing, reviewing, debugging, or extending R code for data
-analysis, wrangling, visualization, modeling, or utility functions.
-Also applies when designing function APIs or reviewing tidyverse
-pipelines.
-
----
+# R Analysis
 
 ## Core philosophy
 - **Idiomatic over clever**: prefer simple, readable tidyverse patterns

@@ -1,12 +1,13 @@
 ---
-name: claude-behavior
-skill_version: "1.0"
+name: agent-behavior
 description: >
   Behavioral directives for every Claude response:
   conciseness, confidence tagging, leading with uncomfortable
   truths, no filler language, and holding position under pushback.
 when_to_load:
   - always
+author: Stu Field
+version: 1.0
 ---
 
 # Claude Behavior Skill

@@ -1,10 +1,15 @@
 ---
 name: style-guide
-description: R style guide for all text files — naming conventions,
-spacing, pipes, ggplot2 formatting, roxygen2 docs, error messages,
-NEWS.md, and Git workflow. Apply when writing or reviewing any text
-file, markdown, quarto document, or R script code, package files,
-or documentation.
+description: >
+  R style guide for all text files — naming conventions,
+  spacing, pipes, ggplot2 formatting, roxygen2 docs, error messages,
+  NEWS.md, and Git workflow. Apply when writing or reviewing any text
+  file, markdown, quarto document, or R script code, package files,
+  or documentation.
+when_to_load:
+  - when working with any R code or package development
+author: Stu Field
+version: 1.0
 ---
 
 # General Text Style

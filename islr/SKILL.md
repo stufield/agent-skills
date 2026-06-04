@@ -1,45 +1,51 @@
 ---
-skill:
-  name: islr
-  skill_version: "3.0"          # version of this SKILL.md file (not the book)
-  book_edition: "2nd Edition (ISLR v2), 2023"
-  source: "An Introduction to Statistical Learning with Applications in R, 2nd Edition (ISLR v2), James · Witten · Hastie · Tibshirani, 2023"
-  description: >
-    Textbook-depth reference for all of ISLR v2. Reads like the book itself:
-    full derivations, intuitive explanations, worked numerical examples on the
-    book's actual datasets (Advertising, Boston, Default, Smarket, Hitters, Wage,
-    Carseats, OJ, USArrests, NCI60, BrainCancer, Khan, NYSE), R code labs, and
-    transitions between ideas. Use to learn or to teach the material.
-  when_to_load:
-    - User asks about any topic in supervised or unsupervised learning
-    - User asks "which method should I use" for prediction or inference
-    - User asks about bias-variance, overfitting, or underfitting
-    - User asks about cross-validation, bootstrap, or model selection criteria (Cp, AIC, BIC)
-    - User asks about ridge, lasso, elastic net, regularization, or shrinkage
-    - User asks about decision trees, random forests, bagging, boosting, BART, or XGBoost
-    - User asks about SVMs, kernels, hyperplanes, margins, or support vectors
-    - User asks about neural networks, CNNs, RNNs, LSTMs, transformers, or deep learning
-    - User asks about PCA, k-means, hierarchical clustering, dendrograms, or matrix completion
-    - User asks about survival analysis, Kaplan-Meier, Cox proportional hazards, censoring, or hazard ratios
-    - User asks about multiple testing, FDR, FWER, Bonferroni, Holm, or Benjamini-Hochberg
-    - User references ISLR, ISL, "James Witten Hastie Tibshirani", any chapter, or any lab in the book
-    - User asks for R code involving lm, glm, glmnet, randomForest, gbm, xgboost, e1071, keras3, survival, pls, boot, leaps, splines, gam, mgcv, tree, rpart
-    - User asks to explain, compare, derive, or implement any statistical learning algorithm
-    - User wants to learn statistical learning / machine learning fundamentals
-  do_not_load:
-    - Pure software engineering with no statistics or modeling component
-    - Pure data engineering, ETL, or database design
-  instructions: >
-    Treat this as a self-contained textbook. Cite chapter and section numbers
-    (e.g., "ISLR §3.3.2") when relevant. Use the worked examples as templates.
-    For any new problem, follow the model-selection workflow in the appendix.
-    Always match method to problem type: regression vs classification, inference
-    vs prediction, parametric vs nonparametric, n vs p regime. Flag assumption
-    violations proactively. Provide R code that runs against the book's datasets
-    when possible.
+name: islr
+book_edition: >
+  "2nd Edition (ISLR v2), 2023"
+source: >
+  "An Introduction to Statistical Learning with Applications in R,
+  2nd Edition (ISLR v2), James · Witten · Hastie · Tibshirani, 2023"
+description: >
+  Textbook-depth reference for all of ISLR v2. Reads like the book itself:
+  full derivations, intuitive explanations, worked numerical examples on the
+  book's actual datasets (Advertising, Boston, Default, Smarket, Hitters, Wage,
+  Carseats, OJ, USArrests, NCI60, BrainCancer, Khan, NYSE), R code labs, and
+  transitions between ideas. Use to learn or to teach the material.
+when_to_load:
+  - User asks about any topic in supervised or unsupervised learning
+  - User asks "which method should I use" for prediction or inference
+  - User asks about bias-variance, overfitting, or underfitting
+  - User asks about cross-validation, bootstrap, or model selection criteria (Cp, AIC, BIC)
+  - User asks about ridge, lasso, elastic net, regularization, or shrinkage
+  - User asks about decision trees, random forests, bagging, boosting, BART, or XGBoost
+  - User asks about SVMs, kernels, hyperplanes, margins, or support vectors
+  - User asks about neural networks, CNNs, RNNs, LSTMs, transformers, or deep learning
+  - User asks about PCA, k-means, hierarchical clustering, dendrograms, or matrix completion
+  - User asks about survival analysis, Kaplan-Meier, Cox proportional hazards, censoring, or hazard ratios
+  - User asks about multiple testing, FDR, FWER, Bonferroni, Holm, or Benjamini-Hochberg
+  - User references ISLR, ISL, "James Witten Hastie Tibshirani", any chapter, or any lab in the book
+  - User asks for R code involving lm, glm, glmnet, randomForest, gbm, xgboost, e1071,
+    keras3, survival, pls, boot, leaps, splines, gam, mgcv, tree, rpart
+  - User asks to explain, compare, derive, or implement any statistical learning algorithm
+  - User wants to learn statistical learning / machine learning fundamentals
+do_not_load:
+  - Pure software engineering with no statistics or modeling component
+  - Pure data engineering, ETL, or database design
+instructions: >
+  Treat this as a self-contained textbook. Cite chapter and section numbers
+  (e.g. "ISLR §3.3.2") when relevant. Use the worked examples as templates.
+  For any new problem, follow the model-selection workflow in the appendix.
+Always match method to problem type: >
+  regression vs classification, inference vs prediction,
+  parametric vs nonparametric, n vs p regime. Flag assumption violations
+  proactively. Provide R code that runs against the book's datasets
+  when possible.
+author: Stu Field
+version: 1.0
 ---
 
-# An Introduction to Statistical Learning — Reference
+
+# An Introduction to Statistical Learning
 
 *Based on James, Witten, Hastie, Tibshirani (2023), 2nd Ed.*
 

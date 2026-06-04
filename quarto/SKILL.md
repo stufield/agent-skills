@@ -1,19 +1,17 @@
 ---
 name: quarto
-description: Conventions for creating, editing, and debugging Quarto
-documents (.qmd) — HTML reports, parameterized content, code chunks,
-TOC formatting, and client branding.
+description: >
+  Conventions for creating, editing, and debugging Quarto
+  documents (.qmd) — HTML reports, parameterized content, code chunks,
+  TOC formatting, and client branding.
+when_to_load:
+  - when creating, editing, or debugging Quarto documents (`*.qmd`)
+  - when building HTML reports with custom branding or parameterized content
+author: Stu Field
+version: 1.0
 ---
 
-# Quarto Reports Skill
-
-## When to use
-
-When creating, editing, or debugging Quarto documents (.qmd) —
-especially HTML reports with custom branding, parameterized content,
-or client-facing output.
-
----
+# Quarto Reports
 
 ## Standard HTML report setup
 
@@ -67,7 +65,7 @@ quarto render report.qmd -P client:"Acme Corp"
 
 ## TOC & section formatting
 
-- Use `##` for top-level report sections (not `#` — that's the title)
+- Use `##` for top-level report sections (not `#` — that is the title)
 - Callout blocks for key findings: `::: {.callout-note}` / `::: {.callout-important}`
 - Tabsets for multi-view content: `::: {.panel-tabset}`
 
@@ -76,4 +74,6 @@ quarto render report.qmd -P client:"Acme Corp"
 ## Things to avoid
 - `self-contained: true` is deprecated in newer Quarto — use `embed-resources: true`
 - Avoid `fig.cap` in chunk options for HTML (use `#| fig-cap:` YAML-style instead)
-- Don't hardcode client names in prose — always route through `params$client`
+- Do not hardcode client names in prose — always route through `params$client`
+
+

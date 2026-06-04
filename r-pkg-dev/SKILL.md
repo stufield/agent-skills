@@ -1,19 +1,20 @@
 ---
 name: r-pkg-dev
-description: R package development guidelines — project structure,
-GitHub Actions CI/CD, DESCRIPTION files, test infrastructure, and
-non-CRAN dependency management.
+description: >
+  R package development guidelines — project structure,
+  GitHub Actions CI/CD, DESCRIPTION files, test infrastructure, and
+  non-CRAN dependency management.
+when_to_load:
+  - when working on R package structure and management
+  - when working with GitHub Actions CI/CD
+  - when working on `DESCRIPTION` files
+  - when creating unit tests and test infrastructure
+  - when considering non-CRAN dependencies
+author: Stu Field
+version: 1.0
 ---
 
-# R Package Development Skill
-
-## When to use
-
-When working on R package structure, GitHub Actions CI/CD,
-`DESCRIPTION` files, test infrastructure, or non-CRAN dependency
-management.
-
----
+# R Package Development
 
 ## Non-CRAN dependencies
 
