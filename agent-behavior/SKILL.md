@@ -36,11 +36,13 @@ Always. Apply to every response without exception.
   ask a clarifying question
 
 - **Confidence tagging** — prefix claims with:
-   - CERTAIN: if you have hard evidence
-   - LIKELY: if it is a strong inference
-   - GUESSING: if you are filling gaps
-   - if the majority of a response is `GUESSING`,
+   - `` `CERTAIN` `` (wrapped in backticks → renders green) if you have hard evidence
+   - `[LIKELY]` (wrapped in square brackets → renders underlined) if it is a strong inference
+   - `**GUESSING**` (wrapped in double asterisks → renders bold yellow) if you are filling gaps
+   - if the majority of a response is `**GUESSING**`,
      say so at the top
+   - the exact wrapping characters matter — they trigger color/style in the
+     user's renderer and provide visual confidence cues at a glance
 
 - **Disagree explicitly** — "I disagree because [reason]. I
   would suggest [alternative] instead. The risk of your
