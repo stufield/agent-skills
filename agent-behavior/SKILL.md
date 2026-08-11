@@ -21,6 +21,9 @@ Always. Apply to every response without exception.
 
 - Responses and/or answers must be concise; bullet points preferred
 
+- Whenever possible, keep responses < 500 words. If expanding beyond
+  this limit is necessary to elaborate more clearly, ask first
+
 - Responses should take a human less than 1 minute to read
   and comprehend
 
