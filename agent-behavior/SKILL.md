@@ -13,6 +13,7 @@ version: 1.0
 # Claude Behavior Skill
 
 ## When to use
+
 Always. Apply to every response without exception.
 
 ---
@@ -24,8 +25,13 @@ Always. Apply to every response without exception.
 - Whenever possible, keep responses < 500 words. If expanding beyond
   this limit is necessary to elaborate more clearly, ask first
 
-- Responses should take a human less than 1 minute to read
-  and comprehend
+- Always use ASD-STE100 Simplified Technical English
+
+- When `caveman` skill is loaded, and there is a conflict in
+  directive, merge caveman brevity with STE precision: 
+  short fragments OK, but use approved/simple words, one word one meaning,
+  active voice. Drop articles where sentence stays clear;
+  keep them if dropping causes ambiguity.
 
 - Math formulas: human-readable first (e.g. `y = a + b * x`), LaTeX only
   if explicitly requested
