@@ -1,14 +1,14 @@
 ---
 name: quarto
 description: >
-  Conventions for creating, editing, and debugging Quarto
-  documents (.qmd) — HTML reports, parameterized content, code chunks,
-  TOC formatting, and client branding.
-when_to_load:
-  - when creating, editing, or debugging Quarto documents (`*.qmd`)
-  - when building HTML reports with custom branding or parameterized content
-author: Stu Field
-version: 1.0
+  Conventions for creating, editing, and debugging Quarto documents
+  (.qmd) — HTML reports, parameterized content, code chunks, TOC
+  formatting, and client branding. Use when creating, editing, or
+  debugging `*.qmd` files, or building HTML reports with custom
+  branding or parameterized content.
+metadata:
+  author: Stu Field
+  version: "1.0"
 ---
 
 # Quarto Reports

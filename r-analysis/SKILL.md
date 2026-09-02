@@ -1,14 +1,14 @@
 ---
-name: R-analysis
+name: r-analysis
 description: >
   Idiomatic R code guidelines for data analysis, wrangling,
   visualization, modeling, and utility functions — tidyverse patterns,
-  native pipe, ggplot2 conventions, preferred packages.
-when_to_load:
-  - when writing, reviewing, debugging, or extending R code
-  - when analysis, wrangling, visualization, modeling, or utility functions in R
-author: Stu Field
-version: 1.0
+  native pipe, ggplot2 conventions, preferred packages. Use when
+  writing, reviewing, debugging, or extending R code for analysis,
+  wrangling, visualization, or modeling.
+metadata:
+  author: Stu Field
+  version: "1.0"
 ---
 
 # R Analysis
