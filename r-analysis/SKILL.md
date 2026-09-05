@@ -43,6 +43,26 @@ coalesce(col, replacement)         # inline
 # Use pick(everything()) or return a tibble and unnest
 ```
 
+### Never use `.by =`
+
+Always use a preceding `group_by()`. `.by` returns groups in order of
+first appearance in the data and drops factor level ordering, so
+result rows come back scrambled relative to the factor levels.
+`group_by()` sorts by level.
+
+```r
+# Wrong
+df |> summarise(.by = protocol, n = n())
+df |> mutate(.by = protocol, mu = mean(dose, na.rm = TRUE))
+
+# Right
+df |> group_by(protocol) |> summarise(n = n())
+df |> group_by(protocol) |> mutate(mu = mean(dose, na.rm = TRUE)) |> ungroup()
+```
+
+Applies to every verb that accepts `.by`, including `mutate()`,
+`filter()` and `slice()`. No exceptions, for consistency.
+
 ---
 
 ## Always use 1L for integers when appropriate
