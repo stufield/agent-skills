@@ -118,6 +118,27 @@ Using any of the following requires deleting the response and starting over:
 - Any semantically equivalent filler (e.g. "Good point", "Good content")
 
 
+# Style
+
+## Markdown tables
+
+- when generating markdown tables, make them human readable
+  by adding adequate spacing between columns
+  - Bad:
+```
+| File | Section | Description |
+|---|---|---|
+| filename | 4 | This is a file with a name and section |
+```
+  - Good:
+```
+| File     | Section | Description                            |
+|----------|---------|----------------------------------------|
+| filename | 4       | This is a file with a name and section |
+```
+
+---
+
 # Unslop Directives
 
 * directives to implement in addition to those above
@@ -145,6 +166,7 @@ as obvious.
 - **Be specific.** Not "this is concerning" but "there's something
   unsettling about agents churning away at 3am."
 
+
 ## Patterns to detect and fix
 
 ### Content
@@ -162,7 +184,8 @@ as obvious.
    descriptions.
 5. **Vague attributions.** "Experts believe", "Industry reports
    suggest", "Some critics argue". Name the source or delete.
-6. **Formulaic challenges.** "Despite challenges... continues to thrive." Replace with specific facts.
+6. **Formulaic challenges.** "Despite challenges... continues to thrive."
+   Replace with specific facts.
 
 ### Language
 

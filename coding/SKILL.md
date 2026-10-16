@@ -63,6 +63,16 @@ failure modes, and troubleshooting tips where appropriate.
 
 ---
 
+### Git commit messages
+
+- Title: < 50 chars
+- Body: bullet points; wrap all lines at 50 chars
+- Body says *why*, plus impact and verification when data changes
+- Verify line lengths before committing, e.g.
+  `awk 'length > 50' msg.txt` prints nothing
+
+---
+
 **These guidelines are working if:** fewer unnecessary changes appear
 in diffs, fewer rewrites stem from overcomplication, and clarifying
 questions come *before* implementation rather than after mistakes.
