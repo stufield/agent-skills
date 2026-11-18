@@ -14,6 +14,10 @@ metadata:
 
 IMPORTANT! When writing text to file, keep all lines <= 70 chars.
 
+Exception: markdown table rows. A row cannot wrap, so a row may
+go over 70 chars when its cell content needs the width. Keep cell
+text short. Do not break a table to meet the limit.
+
 # R style guide
 
 > Compiled from https://style.tidyverse.org/ — all 19 sections.
