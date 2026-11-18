@@ -2,9 +2,9 @@
 name: style-guide
 description: >
   R style guide for all text files — naming conventions, spacing,
-  pipes, ggplot2 formatting, roxygen2 docs, error messages, NEWS.md,
-  and Git workflow. Apply when writing or reviewing R code, R package
-  files, or R-adjacent documentation.
+  pipes, ggplot2 formatting, roxygen2 docs, error messages, and
+  NEWS.md. Apply when writing or reviewing R code, R package files,
+  or R-adjacent documentation.
 metadata:
   author: Stu Field
   version: "1.0"
@@ -26,7 +26,6 @@ Apply when:
 - Writing roxygen2 documentation
 - Constructing error/warning/message strings in a package
 - Writing or grooming `NEWS.md`
-- Composing Git commit messages or PR descriptions
 
 ---
 
@@ -37,20 +36,6 @@ Apply when:
 | `references/naming-and-formatting.md` | 1–4 | File naming, file internal structure, object names, spacing |
 | `references/functions-control-flow-pipes.md` | 5–12 | Vertical space, function calls, braces, control flow, misc syntax, function definitions, pipes, ggplot2 |
 | `references/package-development.md` | 13–18 | Package file names/organisation, roxygen2 docs, tests, error messages, NEWS.md |
-
----
-
-## Git / GitHub
-
-**Commit messages:**
-- Subject line: <= 50 chars, sentence case, no trailing period.
-- Blank line, then paragraph detail if needed.
-- `Fixes #<issue-number>` auto-closes issues on merge.
-
-**Pull requests:**
-- Title: brief description of changes, standalone (no issue number in title).
-- Description: blank for obvious diffs; overview for complex changes;
-  include `Fixes #<issue-number>` in description if applicable.
 
 ---
 
