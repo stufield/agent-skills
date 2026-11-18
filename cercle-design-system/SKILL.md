@@ -52,44 +52,44 @@ Six mistakes that show up most often. Avoid them up front, even before reaching 
 
 ## Token reference (load the file that matches the task)
 
-| File | Covers |
-|---|---|
-| `references/brand-and-iconography.md` | Logo files, logo rules, logo-in-code, Iconoir usage, icon sizing, health-icon mapping |
-| `references/color-tokens.md` | Brand palette, neutral/orange/blue-gray scales, semantic colors, chart palette |
-| `references/typography-tokens.md` | Font families, weights, letter-spacing, line-height, full type scale |
-| `references/spacing-shape-elevation.md` | Spacing scale, border radius/width, shadows, z-index |
-| `references/layout-sizing-motion-focus.md` | Breakpoints, grid, icon/control/avatar sizes, motion durations/easings, focus rings |
-| `references/component-recipes.md` | Ready-made token combos for button, input, card, modal, dropdown, toast, section heading |
+| File                                       | Covers                                                                                   |
+|--------------------------------------------|------------------------------------------------------------------------------------------|
+| `references/brand-and-iconography.md`      | Logo files, logo rules, logo-in-code, Iconoir usage, icon sizing, health-icon mapping    |
+| `references/color-tokens.md`               | Brand palette, neutral/orange/blue-gray scales, semantic colors, chart palette           |
+| `references/typography-tokens.md`          | Font families, weights, letter-spacing, line-height, full type scale                     |
+| `references/spacing-shape-elevation.md`    | Spacing scale, border radius/width, shadows, z-index                                     |
+| `references/layout-sizing-motion-focus.md` | Breakpoints, grid, icon/control/avatar sizes, motion durations/easings, focus rings      |
+| `references/component-recipes.md`          | Ready-made token combos for button, input, card, modal, dropdown, toast, section heading |
 
 ---
 
 ## Quick-reference cheat sheet
 
-| Decision | Token to reach for |
-|----------|--------------------|
-| Primary CTA button | bg `#F76922`, hover `#DC5310`, text `#FFF` |
-| Page background | `#FFFFFF` |
-| Raised surface (card) | bg `#F7F7F6`, shadow elevation-1 |
-| Body text | `#1C2B36` at `bodyM` (16px/24px Barlow 400) |
-| Secondary text | `#54565A` |
-| Muted/helper text | `#7F7F82` |
-| Section heading | `headingM`–`headingXL` Barlow 600 |
-| Input border | `#D0CFCD` default, `#F76922` on focus |
-| Default border radius | 4px (`radius-sm`) |
-| Dropdown shadow | elevation-3 |
-| Modal shadow + z | elevation-5 · z=1200 |
-| Destructive action | bg `#C0392B`, hover `#8E2A21` |
-| Logo on light bg | `Cercle_logo_RGB_Orange.png` |
-| Logo on dark bg | `Cercle_logo_RGB_White.png` |
-| Chart series 1 (always lead with this) | `chart-1.default` (#F76922) |
-| Heatmap intensity | `chart-sequential-warm` (5 stops) |
-| Below/above baseline | `chart-diverging-coolWarm` |
-| On-target vs miss | `chart-diverging-badGood` |
-| Icon library | **Iconoir only** (`<i class="iconoir-X">` or `iconoir-react`) |
-| Vitals icon | `iconoir-activity` |
-| Cardiology icon | `iconoir-heart` |
-| Mental health icon | `iconoir-brain` |
-| Care plan / clinic icon | `iconoir-healthcare` |
+| Decision                               | Token to reach for                                            |
+|----------------------------------------|---------------------------------------------------------------|
+| Primary CTA button                     | bg `#F76922`, hover `#DC5310`, text `#FFF`                    |
+| Page background                        | `#FFFFFF`                                                     |
+| Raised surface (card)                  | bg `#F7F7F6`, shadow elevation-1                              |
+| Body text                              | `#1C2B36` at `bodyM` (16px/24px Barlow 400)                   |
+| Secondary text                         | `#54565A`                                                     |
+| Muted/helper text                      | `#7F7F82`                                                     |
+| Section heading                        | `headingM`–`headingXL` Barlow 600                             |
+| Input border                           | `#D0CFCD` default, `#F76922` on focus                         |
+| Default border radius                  | 4px (`radius-sm`)                                             |
+| Dropdown shadow                        | elevation-3                                                   |
+| Modal shadow + z                       | elevation-5 · z=1200                                          |
+| Destructive action                     | bg `#C0392B`, hover `#8E2A21`                                 |
+| Logo on light bg                       | `Cercle_logo_RGB_Orange.png`                                  |
+| Logo on dark bg                        | `Cercle_logo_RGB_White.png`                                   |
+| Chart series 1 (always lead with this) | `chart-1.default` (#F76922)                                   |
+| Heatmap intensity                      | `chart-sequential-warm` (5 stops)                             |
+| Below/above baseline                   | `chart-diverging-coolWarm`                                    |
+| On-target vs miss                      | `chart-diverging-badGood`                                     |
+| Icon library                           | **Iconoir only** (`<i class="iconoir-X">` or `iconoir-react`) |
+| Vitals icon                            | `iconoir-activity`                                            |
+| Cardiology icon                        | `iconoir-heart`                                               |
+| Mental health icon                     | `iconoir-brain`                                               |
+| Care plan / clinic icon                | `iconoir-healthcare`                                          |
 
 ---
 

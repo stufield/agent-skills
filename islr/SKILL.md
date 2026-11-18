@@ -63,30 +63,30 @@ regression.
 
 These appear repeatedly. Knowing them helps internalize the methods.
 
-| Dataset | Package | n | p | Response | Type |
-|--------|---------|---|---|---------|------|
-| `Advertising` | book website | 200 | 3 | sales | regression |
-| `Auto` | ISLR2 | 392 | 8 | mpg | regression |
-| `Boston` | ISLR2 | 506 | 12 | medv (median home value) | regression |
-| `Carseats` | ISLR2 | 400 | 10 | Sales | regression |
-| `College` | ISLR2 | 777 | 17 | Apps | regression |
-| `Credit` | ISLR2 | 400 | 10 | Balance | regression |
-| `Default` | ISLR2 | 10000 | 3 | default | binary classification |
-| `Hitters` | ISLR2 | 322 | 19 | Salary | regression |
-| `Khan` | ISLR2 | 83 | 2308 | small round blue cell tumor type | high-dim classification |
-| `NCI60` | ISLR2 | 64 | 6830 | cell-line label | unsupervised |
-| `OJ` | ISLR2 | 1070 | 17 | Purchase | binary classification |
-| `Portfolio` | ISLR2 | 100 | 2 | — | bootstrap demo |
-| `Smarket` | ISLR2 | 1250 | 8 | Direction (Up/Down) | binary classification |
-| `USArrests` | base R | 50 | 4 | — | unsupervised (PCA, clustering) |
-| `Wage` | ISLR2 | 3000 | 11 | wage | regression / GAM demo |
-| `Weekly` | ISLR2 | 1089 | 8 | Direction | binary classification |
-| `BrainCancer` | ISLR2 | 88 | 8 | survival time | survival analysis |
-| `Publication` | ISLR2 | 244 | 9 | survival time | survival analysis |
-| `NYSE` | ISLR2 | 6051 | — | log volume | RNN/time series |
-| `IMDb` | keras | — | — | sentiment (binary) | RNN/text classification |
-| `MNIST` | keras | 70000 | 784 | digit (0–9) | CNN |
-| `CIFAR100` | keras | 60000 | — | image label (100 classes) | CNN |
+| Dataset       | Package      | n     | p    | Response                         | Type                           |
+|---------------|--------------|-------|------|----------------------------------|--------------------------------|
+| `Advertising` | book website | 200   | 3    | sales                            | regression                     |
+| `Auto`        | ISLR2        | 392   | 8    | mpg                              | regression                     |
+| `Boston`      | ISLR2        | 506   | 12   | medv (median home value)         | regression                     |
+| `Carseats`    | ISLR2        | 400   | 10   | Sales                            | regression                     |
+| `College`     | ISLR2        | 777   | 17   | Apps                             | regression                     |
+| `Credit`      | ISLR2        | 400   | 10   | Balance                          | regression                     |
+| `Default`     | ISLR2        | 10000 | 3    | default                          | binary classification          |
+| `Hitters`     | ISLR2        | 322   | 19   | Salary                           | regression                     |
+| `Khan`        | ISLR2        | 83    | 2308 | small round blue cell tumor type | high-dim classification        |
+| `NCI60`       | ISLR2        | 64    | 6830 | cell-line label                  | unsupervised                   |
+| `OJ`          | ISLR2        | 1070  | 17   | Purchase                         | binary classification          |
+| `Portfolio`   | ISLR2        | 100   | 2    | —                                | bootstrap demo                 |
+| `Smarket`     | ISLR2        | 1250  | 8    | Direction (Up/Down)              | binary classification          |
+| `USArrests`   | base R       | 50    | 4    | —                                | unsupervised (PCA, clustering) |
+| `Wage`        | ISLR2        | 3000  | 11   | wage                             | regression / GAM demo          |
+| `Weekly`      | ISLR2        | 1089  | 8    | Direction                        | binary classification          |
+| `BrainCancer` | ISLR2        | 88    | 8    | survival time                    | survival analysis              |
+| `Publication` | ISLR2        | 244   | 9    | survival time                    | survival analysis              |
+| `NYSE`        | ISLR2        | 6051  | —    | log volume                       | RNN/time series                |
+| `IMDb`        | keras        | —     | —    | sentiment (binary)               | RNN/text classification        |
+| `MNIST`       | keras        | 70000 | 784  | digit (0–9)                      | CNN                            |
+| `CIFAR100`    | keras        | 60000 | —    | image label (100 classes)        | CNN                            |
 
 Load any ISLR2 dataset with `library(ISLR2); data(Boston)`.
 
@@ -94,21 +94,21 @@ Load any ISLR2 dataset with `library(ISLR2); data(Boston)`.
 
 ## Chapters (load the matching file for full derivations, theory, and R lab code)
 
-| Chapter | File | Covers |
-|---|---|---|
-| 1–2 | `references/ch01-02-introduction-statistical-learning.md` | What is statistical learning, bias-variance, train/test error, R basics |
-| 3 | `references/ch03-linear-regression.md` | Simple/multiple linear regression, interactions, qualitative predictors, KNN comparison |
-| 4 | `references/ch04-classification.md` | Logistic regression, LDA, QDA, Naive Bayes, KNN, GLMs for counts |
-| 5 | `references/ch05-resampling.md` | Cross-validation (validation set, LOOCV, k-fold), the bootstrap |
-| 6 | `references/ch06-selection-regularization.md` | Subset selection, ridge, lasso, PCR, PLS, high-dimensional data |
-| 7 | `references/ch07-nonlinear.md` | Polynomials, step functions, splines, local regression, GAMs |
-| 8 | `references/ch08-trees.md` | Decision trees, bagging, random forests, boosting, BART |
-| 9 | `references/ch09-svm.md` | Maximal margin classifier, support vector classifier/machine, kernels |
-| 10 | `references/ch10-deep-learning.md` | Single/multilayer networks, CNNs, RNNs, when to use deep learning |
-| 11 | `references/ch11-survival.md` | Censoring, Kaplan-Meier, Cox proportional hazards, lasso-Cox |
-| 12 | `references/ch12-unsupervised.md` | PCA, matrix completion, K-means, hierarchical clustering |
-| 13 | `references/ch13-multiple-testing.md` | FWER, FDR, Bonferroni/Holm/Benjamini-Hochberg, resampling p-values |
-| — | `references/glossary-and-r-reference.md` | Glossary of key terms + quick R code lookup by task |
+| Chapter | File                                                      | Covers                                                                                  |
+|---------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| 1–2     | `references/ch01-02-introduction-statistical-learning.md` | What is statistical learning, bias-variance, train/test error, R basics                 |
+| 3       | `references/ch03-linear-regression.md`                    | Simple/multiple linear regression, interactions, qualitative predictors, KNN comparison |
+| 4       | `references/ch04-classification.md`                       | Logistic regression, LDA, QDA, Naive Bayes, KNN, GLMs for counts                        |
+| 5       | `references/ch05-resampling.md`                           | Cross-validation (validation set, LOOCV, k-fold), the bootstrap                         |
+| 6       | `references/ch06-selection-regularization.md`             | Subset selection, ridge, lasso, PCR, PLS, high-dimensional data                         |
+| 7       | `references/ch07-nonlinear.md`                            | Polynomials, step functions, splines, local regression, GAMs                            |
+| 8       | `references/ch08-trees.md`                                | Decision trees, bagging, random forests, boosting, BART                                 |
+| 9       | `references/ch09-svm.md`                                  | Maximal margin classifier, support vector classifier/machine, kernels                   |
+| 10      | `references/ch10-deep-learning.md`                        | Single/multilayer networks, CNNs, RNNs, when to use deep learning                       |
+| 11      | `references/ch11-survival.md`                             | Censoring, Kaplan-Meier, Cox proportional hazards, lasso-Cox                            |
+| 12      | `references/ch12-unsupervised.md`                         | PCA, matrix completion, K-means, hierarchical clustering                                |
+| 13      | `references/ch13-multiple-testing.md`                     | FWER, FDR, Bonferroni/Holm/Benjamini-Hochberg, resampling p-values                      |
+| —       | `references/glossary-and-r-reference.md`                  | Glossary of key terms + quick R code lookup by task                                     |
 
 ---
 
@@ -145,62 +145,62 @@ For any predictive modeling problem, this is a sensible recipe.
 
 ### For regression
 
-| Setting | First try |
-|---------|-----------|
-| n ≫ p, want inference, roughly linear truth | OLS linear regression |
-| n ≫ p, want inference, nonlinear marginal effects | GAM |
-| Many predictors, small/moderate effects | Ridge |
-| Many predictors, sparse truth | Lasso |
-| Many correlated predictors | Elastic Net or PCR |
-| Small p, smooth nonlinear | Splines / GAM |
-| Best predictive accuracy | Gradient boosting (XGBoost) or BART |
-| Good predictive accuracy with little tuning | Random Forest |
+| Setting                                           | First try                           |
+|---------------------------------------------------|-------------------------------------|
+| n ≫ p, want inference, roughly linear truth       | OLS linear regression               |
+| n ≫ p, want inference, nonlinear marginal effects | GAM                                 |
+| Many predictors, small/moderate effects           | Ridge                               |
+| Many predictors, sparse truth                     | Lasso                               |
+| Many correlated predictors                        | Elastic Net or PCR                  |
+| Small p, smooth nonlinear                         | Splines / GAM                       |
+| Best predictive accuracy                          | Gradient boosting (XGBoost) or BART |
+| Good predictive accuracy with little tuning       | Random Forest                       |
 
 ### For classification
 
-| Setting | First try |
-|---------|-----------|
-| Roughly linear boundary, want inference | Logistic regression |
-| Linear boundary, small n, K > 2 classes | LDA |
-| Nonlinear boundary, moderate n | QDA, SVM-RBF, or GBM |
-| High-dim, sparse features (text) | Naive Bayes or logistic with ℓ¹ |
-| Best accuracy | GBM, XGBoost, or RF |
-| Imbalanced classes | Adjust threshold via ROC; consider class weights |
+| Setting                                 | First try                                        |
+|-----------------------------------------|--------------------------------------------------|
+| Roughly linear boundary, want inference | Logistic regression                              |
+| Linear boundary, small n, K > 2 classes | LDA                                              |
+| Nonlinear boundary, moderate n          | QDA, SVM-RBF, or GBM                             |
+| High-dim, sparse features (text)        | Naive Bayes or logistic with ℓ¹                  |
+| Best accuracy                           | GBM, XGBoost, or RF                              |
+| Imbalanced classes                      | Adjust threshold via ROC; consider class weights |
 
 ### For unsupervised
 
-| Setting | First try |
-|---------|-----------|
-| Reduce dimensions, visualize | PCA (then plot PC1 vs PC2) |
-| Find clusters with known K, roughly spherical | K-means (nstart ≥ 20) |
-| Find clusters, K unknown, complex shapes | Hierarchical (Ward.D2 or complete) |
-| Gene expression-like profile data | Hierarchical with correlation distance |
-| Recommender system / fill missing entries | Matrix completion |
+| Setting                                       | First try                              |
+|-----------------------------------------------|----------------------------------------|
+| Reduce dimensions, visualize                  | PCA (then plot PC1 vs PC2)             |
+| Find clusters with known K, roughly spherical | K-means (nstart ≥ 20)                  |
+| Find clusters, K unknown, complex shapes      | Hierarchical (Ward.D2 or complete)     |
+| Gene expression-like profile data             | Hierarchical with correlation distance |
+| Recommender system / fill missing entries     | Matrix completion                      |
 
 ### For survival
 
-| Setting | First try |
-|---------|-----------|
-| Compare two or more groups, no covariates | Kaplan-Meier + log-rank |
-| Continuous covariates | Cox proportional hazards |
-| p ≫ n (genomics) | Lasso-Cox via glmnet |
+| Setting                                   | First try                |
+|-------------------------------------------|--------------------------|
+| Compare two or more groups, no covariates | Kaplan-Meier + log-rank  |
+| Continuous covariates                     | Cox proportional hazards |
+| p ≫ n (genomics)                          | Lasso-Cox via glmnet     |
 
 ## Common pitfalls and their fixes
 
-| Pitfall | Fix |
-|---------|-----|
-| Tuning hyperparameters on the test set | Use CV; never touch test set until final evaluation |
+| Pitfall                                                          | Fix                                                             |
+|------------------------------------------------------------------|-----------------------------------------------------------------|
+| Tuning hyperparameters on the test set                           | Use CV; never touch test set until final evaluation             |
 | Forgetting to scale for KNN, SVM, ridge, lasso, PCA, neural nets | Always `scale()` first, or use a method that does it internally |
-| Reporting training error as model quality | Always report CV or test error |
-| Comparing models with R² when they have different sizes | Use adjusted R², BIC, or CV |
-| Choosing K in clustering by visual inspection | Gap statistic, silhouette, or elbow + domain knowledge |
-| Including an interaction without main effects | Hierarchical principle |
-| Running 100 t-tests, reporting p < 0.05 | Apply BH to control FDR |
-| Interpreting an OLS coefficient causally on observational data | Be careful; consider confounding |
-| Deciding "n is large so everything is significant" | Report effect sizes and CIs, not just p |
-| Selecting polynomial degree by eye | Use CV or ANOVA F-test |
-| Bootstrapping a time series ignoring autocorrelation | Block bootstrap |
-| Imbalanced classes, default 0.5 threshold | ROC curve; choose threshold by cost |
-| Applying lasso without standardizing | `glmnet` does it; check that you didn't bypass it |
-| Inferring causation from PCA loadings | PCA is descriptive, not causal |
-| Letting feature screening leak into CV | CV the entire pipeline, including screening |
+| Reporting training error as model quality                        | Always report CV or test error                                  |
+| Comparing models with R² when they have different sizes          | Use adjusted R², BIC, or CV                                     |
+| Choosing K in clustering by visual inspection                    | Gap statistic, silhouette, or elbow + domain knowledge          |
+| Including an interaction without main effects                    | Hierarchical principle                                          |
+| Running 100 t-tests, reporting p < 0.05                          | Apply BH to control FDR                                         |
+| Interpreting an OLS coefficient causally on observational data   | Be careful; consider confounding                                |
+| Deciding "n is large so everything is significant"               | Report effect sizes and CIs, not just p                         |
+| Selecting polynomial degree by eye                               | Use CV or ANOVA F-test                                          |
+| Bootstrapping a time series ignoring autocorrelation             | Block bootstrap                                                 |
+| Imbalanced classes, default 0.5 threshold                        | ROC curve; choose threshold by cost                             |
+| Applying lasso without standardizing                             | `glmnet` does it; check that you didn't bypass it               |
+| Inferring causation from PCA loadings                            | PCA is descriptive, not causal                                  |
+| Letting feature screening leak into CV                           | CV the entire pipeline, including screening                     |

@@ -31,33 +31,33 @@ Apply when:
 
 ## Sections (load the file that matches the task)
 
-| File | Sections | Covers |
-|---|---|---|
-| `references/naming-and-formatting.md` | 1–4 | File naming, file internal structure, object names, spacing |
-| `references/functions-control-flow-pipes.md` | 5–12 | Vertical space, function calls, braces, control flow, misc syntax, function definitions, pipes, ggplot2 |
-| `references/package-development.md` | 13–18 | Package file names/organisation, roxygen2 docs, tests, error messages, NEWS.md |
+| File                                         | Sections | Covers                                                                                                  |
+|----------------------------------------------|----------|---------------------------------------------------------------------------------------------------------|
+| `references/naming-and-formatting.md`        | 1–4      | File naming, file internal structure, object names, spacing                                             |
+| `references/functions-control-flow-pipes.md` | 5–12     | Vertical space, function calls, braces, control flow, misc syntax, function definitions, pipes, ggplot2 |
+| `references/package-development.md`          | 13–18    | Package file names/organisation, roxygen2 docs, tests, error messages, NEWS.md                          |
 
 ---
 
 ## Quick reference cheat sheet
 
-| Topic | Rule |
-|---|---|
-| File names | `snake_case.R`, ISO dates, padded numbers |
-| Object names | `snake_case`; verbs for functions, nouns for vars |
-| Assignment | `<-` always |
-| Strings | `"double"` by default |
-| Logicals | `TRUE` / `FALSE` never `T` / `F` |
-| Line length | 80 chars max |
-| Indentation | 2 spaces |
-| Pipe | `\|>` (base), not `%>%` |
-| `{` placement | Last char on line; `}` first char on line |
-| `return()` | Early returns only |
-| Anonymous fns | `\(.x) .x + 1` for short; `function(x) { }` for multi-line |
-| ggplot `+` | Same rules as `\|>` |
-| `if` condition | `&&` / `\|\|` not `&` / `\|` |
-| Comments | `# ` prefix; explain *why* not *what* |
-| Semicolons | Never |
-| Roxygen title | Sentence case, no trailing period |
-| Error messages | `cli::cli_abort()`; must/can't; `x`/`i` bullets |
-| Test files | Mirror `R/` structure; `test-foofy.R` |
+| Topic          | Rule                                                       |
+|----------------|------------------------------------------------------------|
+| File names     | `snake_case.R`, ISO dates, padded numbers                  |
+| Object names   | `snake_case`; verbs for functions, nouns for vars          |
+| Assignment     | `<-` always                                                |
+| Strings        | `"double"` by default                                      |
+| Logicals       | `TRUE` / `FALSE` never `T` / `F`                           |
+| Line length    | 80 chars max                                               |
+| Indentation    | 2 spaces                                                   |
+| Pipe           | `\|>` (base), not `%>%`                                    |
+| `{` placement  | Last char on line; `}` first char on line                  |
+| `return()`     | Early returns only                                         |
+| Anonymous fns  | `\(.x) .x + 1` for short; `function(x) { }` for multi-line |
+| ggplot `+`     | Same rules as `\|>`                                        |
+| `if` condition | `&&` / `\|\|` not `&` / `\|`                               |
+| Comments       | `# ` prefix; explain *why* not *what*                      |
+| Semicolons     | Never                                                      |
+| Roxygen title  | Sentence case, no trailing period                          |
+| Error messages | `cli::cli_abort()`; must/can't; `x`/`i` bullets            |
+| Test files     | Mirror `R/` structure; `test-foofy.R`                      |

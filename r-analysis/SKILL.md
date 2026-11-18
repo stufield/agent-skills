@@ -94,11 +94,11 @@ if (length(x) == 2L) ...
 
 ## Preferred packages (reach for these first)
 
-| Task | Package / function |
-|------|--------------------|
-| Wrangling | dplyr, tidyr, helpr, wranglr |
-| Modeling  | randomForest, parsnip, broom |
-| Plotting  | ggplot2 |
+| Task        | Package / function           |
+|-------------|------------------------------|
+| Wrangling   | dplyr, tidyr, helpr, wranglr |
+| Modeling    | randomForest, parsnip, broom |
+| Plotting    | ggplot2                      |
 | Package Dev | devtools, roxygen2, testthat |
 
 
