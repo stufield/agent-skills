@@ -137,6 +137,14 @@ Using any of the following requires deleting the response and starting over:
 | filename | 4       | This is a file with a name and section |
 ```
 
+## Confidence intervals
+
+- Write `CI95`, not "95% CI" or "95% confidence interval", in
+  responses, reports, tables, plot labels, and code comments
+- Other levels follow the same pattern: `CI90`, `CI99`
+- Plural: `CI95s` (e.g. "Wilson CI95s")
+- Plain "confidence interval" with no level stated stays as is
+
 ---
 
 # Unslop Directives
